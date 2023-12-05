@@ -8,7 +8,7 @@ import { Hotel, HotelSchema } from './app.schema';
   imports: [
     MongooseModule.forRoot('mongodb+srv://icherifi:D5Uc2PYTd5bnm9sR@cluster0.ncsbj16.mongodb.net/hotel_data'),
     MongooseModule.forFeature([
-      { name: 'hotel', schema: HotelSchema },
+      { name: Hotel.name, schema: HotelSchema},
     ])
   ],
   controllers: [AppController],

@@ -6,6 +6,7 @@ export type HotelDocument = HydratedDocument<Hotel>;
 
 @Schema({ collection: 'hotel_coll' })
 export class Hotel{
+
     _id : ObjectId
     name : String
     adress : String
@@ -16,8 +17,11 @@ export class Hotel{
     webUrl : String
     gis_id : String
     objectId : Number
-    zipCode : Number   
+    zipCode : Number
 
+    @Prop()
+    isFavorite : Boolean = false
+    
 }
 
-export const HotelSchema = SchemaFactory.createForClass(Hotel);
+export const HotelSchema = SchemaFactory.createForClass(Hotel)

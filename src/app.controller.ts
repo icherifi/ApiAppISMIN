@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Query, Put } from '@nestjs/common';
 import { AppService } from './app.service';
 import { Hotel } from './app.schema';
 
@@ -19,6 +19,11 @@ export class AppController {
     return this.appService.getHotelQuery(parms)
   }
 
+  @Put('/favorite/:id')
+  updateFavorite(@Param('id') id: string, @Body() body: any){ 
+    return this.appService.favorite(id, body);
+  }
+  
   @Get("/detail/:id")
   findOne(@Param('id') id: string) {
     return this.appService.getHotel(id)
