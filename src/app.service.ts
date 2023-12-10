@@ -25,7 +25,7 @@ export class AppService {
     return newHotel  
   }
     
-  async getAll(): Promise<Hotel[]> { //
+  async getAll(): Promise<Hotel[]> { //get all hotel
     return this.hotelModel.find();
   }
 

@@ -6,7 +6,7 @@ import { Hotel, HotelSchema } from './app.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://icherifi:D5Uc2PYTd5bnm9sR@cluster0.ncsbj16.mongodb.net/hotel_data'),
+    MongooseModule.forRoot('mongodb+srv://icherifi:D5Uc2PYTd5bnm9sR@cluster0.ncsbj16.mongodb.net/hotel_data'), //connection to data base mongo
     MongooseModule.forFeature([
       { name: Hotel.name, schema: HotelSchema},
     ])
